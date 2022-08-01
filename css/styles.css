@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: hsl(228deg, 12%, 48%);
+}
+
+.font-fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.spacing {
+  letter-spacing: 4px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+  background: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  display: flex;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 345px;
+  }
+}
+@media (min-width: 769px) {
+  .card {
+    max-width: 560px;
+  }
+}
+.card .left {
+  min-height: 240px;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-width: 769px) {
+  .card .left {
+    background-image: url("../images/image-product-desktop.jpg");
+    min-width: 280px;
+  }
+}
+.card .right {
+  padding: 1.5rem;
+  background: hsl(0deg, 0%, 100%);
+}
+.card .right .title {
+  margin-top: 0.6rem;
+  color: hsl(212deg, 21%, 14%);
+  font-size: 2rem;
+}
+.card .right p {
+  line-height: 1.5rem;
+}
+.card .right .price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card .right .price .discount {
+  color: hsl(158deg, 36%, 37%);
+  font-size: 2rem;
+}
+.card .right .price .before-discount {
+  text-decoration: line-through;
+}
+.card .right .button {
+  all: unset;
+  color: white;
+  background: hsl(158deg, 36%, 37%);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem;
+  width: calc(100% - 1.5rem);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+.card .right .button:hover {
+  background-color: hsl(158deg, 36%, 17%);
+}
+.card .right .button img {
+  margin-right: 0.8rem;
+}/*# sourceMappingURL=styles.css.map */

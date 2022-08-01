@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$Very-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: $Dark-grayish-blue;
+}
+
+.font-fraunces {
+	font-family: 'Fraunces', serif;
+}
+
+.margin-bottom-1 {
+	margin-bottom: 1rem;
+}
+
+.spacing {
+	letter-spacing: 4px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	min-height: 100vh;
+	background: $Cream;
+}
+
+.card {
+	display: flex;
+	border-radius: 0.8rem;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		max-width: 345px;
+	}
+
+	@media (min-width: 769px) {
+		max-width: 560px;
+	}
+
+	.left {
+		min-height: 240px;
+		background-image: url('../images/image-product-mobile.jpg');
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		@media (min-width: 769px) {
+			background-image: url('../images/image-product-desktop.jpg');
+			min-width: 280px;
+		}
+	}
+
+	.right {
+		padding: 1.5rem;
+		background: $White;
+
+		.title {
+			margin-top: 0.6rem;
+			color: $Very-dark-blue;
+			font-size: 2rem;
+		}
+
+		p {
+			line-height: 1.5rem;
+		}
+
+		.price {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			.discount {
+				color: $Dark-cyan;
+				font-size: 2rem;
+			}
+			.before-discount {
+				text-decoration: line-through;
+			}
+		}
+
+		.button {
+			all: unset;
+			color: white;
+			background: $Dark-cyan;
+			font-size: 14px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			cursor: pointer;
+			padding: 1rem;
+			width: calc(100% - 1.5rem);
+			border-radius: 0.5rem;
+			transition: 0.3s;
+
+			&:hover {
+				background-color: hsl(158, 36%, 17%);
+			}
+
+			img {
+				margin-right: 0.8rem;
+			}
+		}
+	}
+}
