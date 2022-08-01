@@ -49,6 +49,7 @@ body {
   }
 }
 .card .left {
+  flex: 1;
   min-height: 240px;
   background-image: url("../images/image-product-mobile.jpg");
   background-repeat: no-repeat;
@@ -62,6 +63,7 @@ body {
   }
 }
 .card .right {
+  flex: 1;
   padding: 1.5rem;
   background: hsl(0deg, 0%, 100%);
 }

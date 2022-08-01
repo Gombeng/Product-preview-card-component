@@ -54,6 +54,7 @@ body {
 	}
 
 	.left {
+		flex:1;
 		min-height: 240px;
 		background-image: url('../images/image-product-mobile.jpg');
 
@@ -68,6 +69,7 @@ body {
 	}
 
 	.right {
+		flex:1;
 		padding: 1.5rem;
 		background: $White;
 
